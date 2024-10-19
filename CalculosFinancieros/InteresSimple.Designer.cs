@@ -52,11 +52,9 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             tbgPresente = new TabPage();
-            tbgTasaInteres = new TabPage();
-            tbgPeriodo = new TabPage();
-            panel4 = new Panel();
-            pictureBox3 = new PictureBox();
-            label6 = new Label();
+            panel6 = new Panel();
+            dtgvResultadoP = new DataGridView();
+            label12 = new Label();
             panel5 = new Panel();
             btnLimpiarP = new Button();
             btnCalcularP = new Button();
@@ -69,13 +67,15 @@
             label8 = new Label();
             label10 = new Label();
             label11 = new Label();
-            panel6 = new Panel();
-            dtgvResultadoP = new DataGridView();
-            label12 = new Label();
-            panel7 = new Panel();
-            pictureBox4 = new PictureBox();
-            label13 = new Label();
+            panel4 = new Panel();
+            pictureBox3 = new PictureBox();
+            label6 = new Label();
+            tbgTasaInteres = new TabPage();
+            panel9 = new Panel();
+            dtgvResultadosI = new DataGridView();
+            label18 = new Label();
             panel8 = new Panel();
+            comboBox1 = new ComboBox();
             btnLimpiarI = new Button();
             btnCalcularI = new Button();
             txtPeriodoI = new TextBox();
@@ -85,18 +85,15 @@
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
-            panel9 = new Panel();
-            dtgvResultadosI = new DataGridView();
-            label18 = new Label();
-            comboBox1 = new ComboBox();
+            panel7 = new Panel();
+            pictureBox4 = new PictureBox();
+            label13 = new Label();
+            tbgPeriodo = new TabPage();
             panel10 = new Panel();
             dtgvResultadosN = new DataGridView();
             label19 = new Label();
             panel11 = new Panel();
             btnLimpiarN = new Button();
-            this.btnCalcularN = new Button();
-            this.txtInteresN = new TextBox();
-            this.txtValorPresenteN = new TextBox();
             txtValorFuturoN = new TextBox();
             label20 = new Label();
             label21 = new Label();
@@ -105,6 +102,9 @@
             panel12 = new Panel();
             pictureBox5 = new PictureBox();
             label24 = new Label();
+            txtValorPresenteN = new TextBox();
+            txtInteresN = new TextBox();
+            btnCalcularN = new Button();
             tabControl1.SuspendLayout();
             tbgDefinición.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -115,18 +115,18 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tbgPresente.SuspendLayout();
-            tbgTasaInteres.SuspendLayout();
-            tbgPeriodo.SuspendLayout();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel5.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadoP).BeginInit();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel8.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            tbgTasaInteres.SuspendLayout();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosI).BeginInit();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tbgPeriodo.SuspendLayout();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosN).BeginInit();
             panel11.SuspendLayout();
@@ -388,60 +388,35 @@
             tbgPresente.TabIndex = 2;
             tbgPresente.Text = "Presente";
             // 
-            // tbgTasaInteres
+            // panel6
             // 
-            tbgTasaInteres.BackColor = Color.FromArgb(26, 32, 40);
-            tbgTasaInteres.Controls.Add(panel9);
-            tbgTasaInteres.Controls.Add(panel8);
-            tbgTasaInteres.Controls.Add(panel7);
-            tbgTasaInteres.Location = new Point(4, 34);
-            tbgTasaInteres.Name = "tbgTasaInteres";
-            tbgTasaInteres.Size = new Size(1072, 574);
-            tbgTasaInteres.TabIndex = 3;
-            tbgTasaInteres.Text = "Tasa Interes";
+            panel6.BackColor = Color.FromArgb(51, 51, 51);
+            panel6.Controls.Add(dtgvResultadoP);
+            panel6.Controls.Add(label12);
+            panel6.Location = new Point(552, 181);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(503, 357);
+            panel6.TabIndex = 3;
             // 
-            // tbgPeriodo
+            // dtgvResultadoP
             // 
-            tbgPeriodo.BackColor = Color.FromArgb(26, 32, 40);
-            tbgPeriodo.Controls.Add(panel10);
-            tbgPeriodo.Controls.Add(panel11);
-            tbgPeriodo.Controls.Add(panel12);
-            tbgPeriodo.Location = new Point(4, 34);
-            tbgPeriodo.Name = "tbgPeriodo";
-            tbgPeriodo.Size = new Size(1072, 574);
-            tbgPeriodo.TabIndex = 4;
-            tbgPeriodo.Text = "Periodo";
+            dtgvResultadoP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvResultadoP.Location = new Point(18, 96);
+            dtgvResultadoP.Name = "dtgvResultadoP";
+            dtgvResultadoP.ScrollBars = ScrollBars.Vertical;
+            dtgvResultadoP.Size = new Size(466, 188);
+            dtgvResultadoP.TabIndex = 2;
             // 
-            // panel4
+            // label12
             // 
-            panel4.BackColor = Color.FromArgb(51, 51, 51);
-            panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(label6);
-            panel4.Location = new Point(357, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(413, 172);
-            panel4.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(89, 37);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(264, 132);
-            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(67, 235, 103);
-            label6.Location = new Point(146, -3);
-            label6.Name = "label6";
-            label6.Size = new Size(145, 45);
-            label6.TabIndex = 0;
-            label6.Text = "Ecuación";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(67, 235, 103);
+            label12.Location = new Point(173, 12);
+            label12.Name = "label12";
+            label12.Size = new Size(174, 45);
+            label12.TabIndex = 1;
+            label12.Text = "Resultados";
             // 
             // panel5
             // 
@@ -575,66 +550,78 @@
             label11.TabIndex = 1;
             label11.Text = "Ingrese los Datos";
             // 
-            // panel6
+            // panel4
             // 
-            panel6.BackColor = Color.FromArgb(51, 51, 51);
-            panel6.Controls.Add(dtgvResultadoP);
-            panel6.Controls.Add(label12);
-            panel6.Location = new Point(552, 181);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(503, 357);
-            panel6.TabIndex = 3;
+            panel4.BackColor = Color.FromArgb(51, 51, 51);
+            panel4.Controls.Add(pictureBox3);
+            panel4.Controls.Add(label6);
+            panel4.Location = new Point(357, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(413, 172);
+            panel4.TabIndex = 1;
             // 
-            // dtgvResultadoP
+            // pictureBox3
             // 
-            dtgvResultadoP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvResultadoP.Location = new Point(18, 96);
-            dtgvResultadoP.Name = "dtgvResultadoP";
-            dtgvResultadoP.ScrollBars = ScrollBars.Vertical;
-            dtgvResultadoP.Size = new Size(466, 188);
-            dtgvResultadoP.TabIndex = 2;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(89, 37);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(264, 132);
+            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
             // 
-            // label12
+            // label6
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.FromArgb(67, 235, 103);
-            label12.Location = new Point(173, 12);
-            label12.Name = "label12";
-            label12.Size = new Size(174, 45);
-            label12.TabIndex = 1;
-            label12.Text = "Resultados";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(67, 235, 103);
+            label6.Location = new Point(146, -3);
+            label6.Name = "label6";
+            label6.Size = new Size(145, 45);
+            label6.TabIndex = 0;
+            label6.Text = "Ecuación";
             // 
-            // panel7
+            // tbgTasaInteres
             // 
-            panel7.BackColor = Color.FromArgb(51, 51, 51);
-            panel7.Controls.Add(pictureBox4);
-            panel7.Controls.Add(label13);
-            panel7.Location = new Point(341, 3);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(413, 185);
-            panel7.TabIndex = 2;
+            tbgTasaInteres.BackColor = Color.FromArgb(26, 32, 40);
+            tbgTasaInteres.Controls.Add(panel9);
+            tbgTasaInteres.Controls.Add(panel8);
+            tbgTasaInteres.Controls.Add(panel7);
+            tbgTasaInteres.Location = new Point(4, 34);
+            tbgTasaInteres.Name = "tbgTasaInteres";
+            tbgTasaInteres.Size = new Size(1072, 574);
+            tbgTasaInteres.TabIndex = 3;
+            tbgTasaInteres.Text = "Tasa Interes";
             // 
-            // pictureBox4
+            // panel9
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(85, 36);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(224, 131);
-            pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
+            panel9.BackColor = Color.FromArgb(51, 51, 51);
+            panel9.Controls.Add(dtgvResultadosI);
+            panel9.Controls.Add(label18);
+            panel9.Location = new Point(561, 194);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(503, 357);
+            panel9.TabIndex = 4;
             // 
-            // label13
+            // dtgvResultadosI
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(67, 235, 103);
-            label13.Location = new Point(146, -3);
-            label13.Name = "label13";
-            label13.Size = new Size(145, 45);
-            label13.TabIndex = 0;
-            label13.Text = "Ecuación";
+            dtgvResultadosI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvResultadosI.Location = new Point(18, 96);
+            dtgvResultadosI.Name = "dtgvResultadosI";
+            dtgvResultadosI.ScrollBars = ScrollBars.Vertical;
+            dtgvResultadosI.Size = new Size(466, 188);
+            dtgvResultadosI.TabIndex = 2;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.FromArgb(67, 235, 103);
+            label18.Location = new Point(173, 12);
+            label18.Name = "label18";
+            label18.Size = new Size(174, 45);
+            label18.TabIndex = 1;
+            label18.Text = "Resultados";
             // 
             // panel8
             // 
@@ -653,6 +640,14 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(503, 357);
             panel8.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(363, 106);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 33);
+            comboBox1.TabIndex = 12;
             // 
             // btnLimpiarI
             // 
@@ -751,43 +746,48 @@
             label17.TabIndex = 1;
             label17.Text = "Ingrese los Datos";
             // 
-            // panel9
+            // panel7
             // 
-            panel9.BackColor = Color.FromArgb(51, 51, 51);
-            panel9.Controls.Add(dtgvResultadosI);
-            panel9.Controls.Add(label18);
-            panel9.Location = new Point(561, 194);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(503, 357);
-            panel9.TabIndex = 4;
+            panel7.BackColor = Color.FromArgb(51, 51, 51);
+            panel7.Controls.Add(pictureBox4);
+            panel7.Controls.Add(label13);
+            panel7.Location = new Point(341, 3);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(413, 185);
+            panel7.TabIndex = 2;
             // 
-            // dtgvResultadosI
+            // pictureBox4
             // 
-            dtgvResultadosI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvResultadosI.Location = new Point(18, 96);
-            dtgvResultadosI.Name = "dtgvResultadosI";
-            dtgvResultadosI.ScrollBars = ScrollBars.Vertical;
-            dtgvResultadosI.Size = new Size(466, 188);
-            dtgvResultadosI.TabIndex = 2;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(85, 36);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(224, 131);
+            pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
             // 
-            // label18
+            // label13
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.ForeColor = Color.FromArgb(67, 235, 103);
-            label18.Location = new Point(173, 12);
-            label18.Name = "label18";
-            label18.Size = new Size(174, 45);
-            label18.TabIndex = 1;
-            label18.Text = "Resultados";
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(67, 235, 103);
+            label13.Location = new Point(146, -3);
+            label13.Name = "label13";
+            label13.Size = new Size(145, 45);
+            label13.TabIndex = 0;
+            label13.Text = "Ecuación";
             // 
-            // comboBox1
+            // tbgPeriodo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(363, 106);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 33);
-            comboBox1.TabIndex = 12;
+            tbgPeriodo.BackColor = Color.FromArgb(26, 32, 40);
+            tbgPeriodo.Controls.Add(panel10);
+            tbgPeriodo.Controls.Add(panel11);
+            tbgPeriodo.Controls.Add(panel12);
+            tbgPeriodo.Location = new Point(4, 34);
+            tbgPeriodo.Name = "tbgPeriodo";
+            tbgPeriodo.Size = new Size(1072, 574);
+            tbgPeriodo.TabIndex = 4;
+            tbgPeriodo.Text = "Periodo";
             // 
             // panel10
             // 
@@ -822,10 +822,10 @@
             // panel11
             // 
             panel11.BackColor = Color.FromArgb(51, 51, 51);
+            panel11.Controls.Add(btnCalcularN);
+            panel11.Controls.Add(txtInteresN);
+            panel11.Controls.Add(txtValorPresenteN);
             panel11.Controls.Add(btnLimpiarN);
-            panel11.Controls.Add(this.btnCalcularN);
-            panel11.Controls.Add(this.txtInteresN);
-            panel11.Controls.Add(this.txtValorPresenteN);
             panel11.Controls.Add(txtValorFuturoN);
             panel11.Controls.Add(label20);
             panel11.Controls.Add(label21);
@@ -848,37 +848,6 @@
             btnLimpiarN.TabIndex = 11;
             btnLimpiarN.Text = "LImpiar";
             btnLimpiarN.UseVisualStyleBackColor = false;
-            // 
-            // btnCalcularN
-            // 
-            this.btnCalcularN.BackColor = Color.FromArgb(26, 32, 40);
-            this.btnCalcularN.FlatAppearance.BorderSize = 0;
-            this.btnCalcularN.FlatStyle = FlatStyle.Flat;
-            this.btnCalcularN.ForeColor = Color.White;
-            this.btnCalcularN.Location = new Point(150, 290);
-            this.btnCalcularN.Name = "btnCalcularN";
-            this.btnCalcularN.Size = new Size(98, 32);
-            this.btnCalcularN.TabIndex = 10;
-            this.btnCalcularN.Text = "Calcular";
-            this.btnCalcularN.UseVisualStyleBackColor = false;
-            // 
-            // txtInteresN
-            // 
-            this.txtInteresN.BackColor = Color.FromArgb(26, 32, 40);
-            this.txtInteresN.BorderStyle = BorderStyle.None;
-            this.txtInteresN.Location = new Point(217, 221);
-            this.txtInteresN.Name = "txtInteresN";
-            this.txtInteresN.Size = new Size(123, 26);
-            this.txtInteresN.TabIndex = 7;
-            // 
-            // txtValorPresenteN
-            // 
-            this.txtValorPresenteN.BackColor = Color.FromArgb(26, 32, 40);
-            this.txtValorPresenteN.BorderStyle = BorderStyle.None;
-            this.txtValorPresenteN.Location = new Point(217, 145);
-            this.txtValorPresenteN.Name = "txtValorPresenteN";
-            this.txtValorPresenteN.Size = new Size(123, 26);
-            this.txtValorPresenteN.TabIndex = 6;
             // 
             // txtValorFuturoN
             // 
@@ -964,6 +933,37 @@
             label24.TabIndex = 0;
             label24.Text = "Ecuación";
             // 
+            // txtValorPresenteN
+            // 
+            txtValorPresenteN.BackColor = Color.FromArgb(26, 32, 40);
+            txtValorPresenteN.BorderStyle = BorderStyle.None;
+            txtValorPresenteN.Location = new Point(217, 149);
+            txtValorPresenteN.Name = "txtValorPresenteN";
+            txtValorPresenteN.Size = new Size(123, 26);
+            txtValorPresenteN.TabIndex = 12;
+            // 
+            // txtInteresN
+            // 
+            txtInteresN.BackColor = Color.FromArgb(26, 32, 40);
+            txtInteresN.BorderStyle = BorderStyle.None;
+            txtInteresN.Location = new Point(217, 224);
+            txtInteresN.Name = "txtInteresN";
+            txtInteresN.Size = new Size(123, 26);
+            txtInteresN.TabIndex = 13;
+            // 
+            // btnCalcularN
+            // 
+            btnCalcularN.BackColor = Color.FromArgb(26, 32, 40);
+            btnCalcularN.FlatAppearance.BorderSize = 0;
+            btnCalcularN.FlatStyle = FlatStyle.Flat;
+            btnCalcularN.ForeColor = Color.White;
+            btnCalcularN.Location = new Point(143, 290);
+            btnCalcularN.Name = "btnCalcularN";
+            btnCalcularN.Size = new Size(98, 32);
+            btnCalcularN.TabIndex = 14;
+            btnCalcularN.Text = "Calcular";
+            btnCalcularN.UseVisualStyleBackColor = false;
+            // 
             // InteresSimple
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -986,24 +986,24 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tbgPresente.ResumeLayout(false);
-            tbgTasaInteres.ResumeLayout(false);
-            tbgPeriodo.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadoP).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            tbgTasaInteres.ResumeLayout(false);
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosI).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tbgPeriodo.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosN).EndInit();
@@ -1094,5 +1094,8 @@
         private Panel panel12;
         private PictureBox pictureBox5;
         private Label label24;
+        private Button btnCalcularN;
+        private TextBox txtInteresN;
+        private TextBox txtValorPresenteN;
     }
 }

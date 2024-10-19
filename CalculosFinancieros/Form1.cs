@@ -70,7 +70,7 @@ namespace CalculosFinancieros
 
         private void btnInteresCompuesto_Click(object sender, EventArgs e)
         {
-            //Codigo
+            AbrirFormHija(new frmInteresCompuesto());
             hideSubMenu();
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
