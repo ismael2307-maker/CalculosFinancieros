@@ -93,6 +93,9 @@
             dtgvResultadosN = new DataGridView();
             label19 = new Label();
             panel11 = new Panel();
+            btnCalcularN = new Button();
+            txtInteresN = new TextBox();
+            txtValorPresenteN = new TextBox();
             btnLimpiarN = new Button();
             txtValorFuturoN = new TextBox();
             label20 = new Label();
@@ -102,9 +105,6 @@
             panel12 = new Panel();
             pictureBox5 = new PictureBox();
             label24 = new Label();
-            txtValorPresenteN = new TextBox();
-            txtInteresN = new TextBox();
-            btnCalcularN = new Button();
             tabControl1.SuspendLayout();
             tbgDefinición.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -258,10 +258,12 @@
             btnCalcular.TabIndex = 10;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = false;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // cmbPeriodo
             // 
             cmbPeriodo.FormattingEnabled = true;
+            cmbPeriodo.Items.AddRange(new object[] { "Años", "Meses", "Semestres", "Trimestres" });
             cmbPeriodo.Location = new Point(360, 221);
             cmbPeriodo.Name = "cmbPeriodo";
             cmbPeriodo.Size = new Size(121, 33);
@@ -270,6 +272,7 @@
             // cmbInteres
             // 
             cmbInteres.FormattingEnabled = true;
+            cmbInteres.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
             cmbInteres.Location = new Point(360, 146);
             cmbInteres.Name = "cmbInteres";
             cmbInteres.Size = new Size(121, 33);
@@ -836,6 +839,37 @@
             panel11.Size = new Size(503, 357);
             panel11.TabIndex = 6;
             // 
+            // btnCalcularN
+            // 
+            btnCalcularN.BackColor = Color.FromArgb(26, 32, 40);
+            btnCalcularN.FlatAppearance.BorderSize = 0;
+            btnCalcularN.FlatStyle = FlatStyle.Flat;
+            btnCalcularN.ForeColor = Color.White;
+            btnCalcularN.Location = new Point(143, 290);
+            btnCalcularN.Name = "btnCalcularN";
+            btnCalcularN.Size = new Size(98, 32);
+            btnCalcularN.TabIndex = 14;
+            btnCalcularN.Text = "Calcular";
+            btnCalcularN.UseVisualStyleBackColor = false;
+            // 
+            // txtInteresN
+            // 
+            txtInteresN.BackColor = Color.FromArgb(26, 32, 40);
+            txtInteresN.BorderStyle = BorderStyle.None;
+            txtInteresN.Location = new Point(217, 224);
+            txtInteresN.Name = "txtInteresN";
+            txtInteresN.Size = new Size(123, 26);
+            txtInteresN.TabIndex = 13;
+            // 
+            // txtValorPresenteN
+            // 
+            txtValorPresenteN.BackColor = Color.FromArgb(26, 32, 40);
+            txtValorPresenteN.BorderStyle = BorderStyle.None;
+            txtValorPresenteN.Location = new Point(217, 149);
+            txtValorPresenteN.Name = "txtValorPresenteN";
+            txtValorPresenteN.Size = new Size(123, 26);
+            txtValorPresenteN.TabIndex = 12;
+            // 
             // btnLimpiarN
             // 
             btnLimpiarN.BackColor = Color.FromArgb(26, 32, 40);
@@ -932,37 +966,6 @@
             label24.Size = new Size(145, 45);
             label24.TabIndex = 0;
             label24.Text = "Ecuación";
-            // 
-            // txtValorPresenteN
-            // 
-            txtValorPresenteN.BackColor = Color.FromArgb(26, 32, 40);
-            txtValorPresenteN.BorderStyle = BorderStyle.None;
-            txtValorPresenteN.Location = new Point(217, 149);
-            txtValorPresenteN.Name = "txtValorPresenteN";
-            txtValorPresenteN.Size = new Size(123, 26);
-            txtValorPresenteN.TabIndex = 12;
-            // 
-            // txtInteresN
-            // 
-            txtInteresN.BackColor = Color.FromArgb(26, 32, 40);
-            txtInteresN.BorderStyle = BorderStyle.None;
-            txtInteresN.Location = new Point(217, 224);
-            txtInteresN.Name = "txtInteresN";
-            txtInteresN.Size = new Size(123, 26);
-            txtInteresN.TabIndex = 13;
-            // 
-            // btnCalcularN
-            // 
-            btnCalcularN.BackColor = Color.FromArgb(26, 32, 40);
-            btnCalcularN.FlatAppearance.BorderSize = 0;
-            btnCalcularN.FlatStyle = FlatStyle.Flat;
-            btnCalcularN.ForeColor = Color.White;
-            btnCalcularN.Location = new Point(143, 290);
-            btnCalcularN.Name = "btnCalcularN";
-            btnCalcularN.Size = new Size(98, 32);
-            btnCalcularN.TabIndex = 14;
-            btnCalcularN.Text = "Calcular";
-            btnCalcularN.UseVisualStyleBackColor = false;
             // 
             // InteresSimple
             // 
