@@ -56,9 +56,9 @@ namespace CalculosFinancieros
                 }
                 else if (cmbInteres.SelectedItem.Equals("Mensual") && cmbPeriodo.SelectedItem.Equals("Trimestres"))
                 {
-                    calculo = new CalculoMensualTrimestres(valorPresenteFU,tasaInteresFU,periodoFU);
+                    calculo = new CalculoMensualTrimestres(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
-                else if(cmbInteres.SelectedItem.Equals("Semestral") && cmbPeriodo.SelectedItem.Equals("Años"))
+                else if (cmbInteres.SelectedItem.Equals("Semestral") && cmbPeriodo.SelectedItem.Equals("Años"))
                 {
                     calculo = new CalculoSemestralAños(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
@@ -74,13 +74,13 @@ namespace CalculosFinancieros
                 {
                     calculo = new CalculoSemestralTrimestres(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
-                else if(cmbInteres.SelectedItem.Equals("Trimestral") && cmbPeriodo.SelectedItem.Equals("Años"))
+                else if (cmbInteres.SelectedItem.Equals("Trimestral") && cmbPeriodo.SelectedItem.Equals("Años"))
                 {
                     calculo = new CalculoTrimestralAños(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
                 else if (cmbInteres.SelectedItem.Equals("Trimestral") && cmbPeriodo.SelectedItem.Equals("Meses"))
                 {
-                    calculo = new CalculoTrimestralMeses(valorPresenteFU,tasaInteresFU,periodoFU);
+                    calculo = new CalculoTrimestralMeses(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
                 else if (cmbInteres.SelectedItem.Equals("Trimestral") && cmbPeriodo.SelectedItem.Equals("Semestres"))
                 {
@@ -91,7 +91,7 @@ namespace CalculosFinancieros
                     calculo = new CalculoTrimestralTrimestres(valorPresenteFU, tasaInteresFU, periodoFU);
                 }
 
-                if(calculo != null)
+                if (calculo != null)
                 {
                     calculo.CalcularFuturo();
                     var resultado = calculo.ObtenerResultadoFormateado();
@@ -100,6 +100,65 @@ namespace CalculosFinancieros
                     dtgvResultadosFuturo.DataSource = ResultadosPresenteSimple.ToList();
                 }
             }
+        }
+        //*********************************************************************************
+        private List<object> ResultadosPresente = new List<object>();
+        private void btnCalcularP_Click(object sender, EventArgs e)
+        {
+            double valorFuturo = Convert.ToDouble(txtValorFuturo.Text);
+            double tasaInteres = Convert.ToDouble(txtTasaInteresP.Text);
+            double periodo = Convert.ToDouble(txtPeriodoP.Text);
+
+            ICalcularValorPresente calculoPresente = null;
+
+            if (cmbInteresP.SelectedItem != null && cmbPeriodoP.SelectedItem != null)
+            {
+                if (cmbInteresP.SelectedItem.Equals("Anual") && cmbPeriodoP.SelectedItem.Equals("Meses"))
+                {
+                    calculoPresente = new CalculoAnualMesesPresente(valorFuturo, tasaInteres, periodo);
+                }
+                else if (cmbInteresP.SelectedItem.Equals("Anual") && cmbPeriodoP.SelectedItem.Equals("Años"))
+                {
+                    calculoPresente = new CalculoAnualAñosPresente(valorFuturo, tasaInteres, periodo);
+                }
+                else if (cmbInteresP.SelectedItem.Equals("Anual") && cmbPeriodoP.SelectedItem.Equals("Semestres"))
+                {
+                    calculoPresente = new CalculoAnualSemestresPresente(valorFuturo, tasaInteres, periodo);
+                }
+                else if (cmbInteresP.SelectedItem.Equals("Mensual") && cmbPeriodoP.SelectedItem.Equals("Años"))
+                {
+                    calculoPresente = new CalculoMensualAñosPresente(valorFuturo, tasaInteres, periodo);
+                }
+
+                if (calculoPresente != null)
+                {
+                    calculoPresente.CalcularValorPresente();
+                    var resultadoPresente = calculoPresente.ObtenerResultadoFormateado();
+                    ResultadosPresente.Add(resultadoPresente);
+
+                    dtgvResultadoP.DataSource = null;
+                    dtgvResultadoP.DataSource = ResultadosPresente.ToList();
+                }
+
+            }
+        }
+
+        private void InteresSimple_Load(object sender, EventArgs e)
+        {
+            cmbInteresP.Items.Add("Anual");
+            cmbInteresP.Items.Add("Mensual");
+            cmbInteresP.Items.Add("Semestral");
+            cmbInteresP.Items.Add("Trimestral");
+
+            cmbPeriodoP.Items.Add("Años");
+            cmbPeriodoP.Items.Add("Meses");
+            cmbPeriodoP.Items.Add("Semestres");
+            cmbPeriodoP.Items.Add("Trimestres");
+
+            cmbInteresP.SelectedIndex = 0;
+            cmbPeriodoP.SelectedIndex = 0;
+
+
         }
     }
 }

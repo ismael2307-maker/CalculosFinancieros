@@ -56,12 +56,12 @@
             dtgvResultadoP = new DataGridView();
             label12 = new Label();
             panel5 = new Panel();
-            btnLimpiarP = new Button();
-            btnCalcularP = new Button();
             cmbPeriodoP = new ComboBox();
             cmbInteresP = new ComboBox();
+            btnLimpiarP = new Button();
+            btnCalcularP = new Button();
             txtPeriodoP = new TextBox();
-            txtTasaIneresP = new TextBox();
+            txtTasaInteresP = new TextBox();
             txtValorFuturo = new TextBox();
             label7 = new Label();
             label8 = new Label();
@@ -262,6 +262,7 @@
             // 
             // cmbPeriodo
             // 
+            cmbPeriodo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPeriodo.FormattingEnabled = true;
             cmbPeriodo.Items.AddRange(new object[] { "Años", "Meses", "Semestres", "Trimestres" });
             cmbPeriodo.Location = new Point(360, 221);
@@ -271,6 +272,7 @@
             // 
             // cmbInteres
             // 
+            cmbInteres.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbInteres.FormattingEnabled = true;
             cmbInteres.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
             cmbInteres.Location = new Point(360, 146);
@@ -424,12 +426,12 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(51, 51, 51);
-            panel5.Controls.Add(btnLimpiarP);
-            panel5.Controls.Add(btnCalcularP);
             panel5.Controls.Add(cmbPeriodoP);
             panel5.Controls.Add(cmbInteresP);
+            panel5.Controls.Add(btnLimpiarP);
+            panel5.Controls.Add(btnCalcularP);
             panel5.Controls.Add(txtPeriodoP);
-            panel5.Controls.Add(txtTasaIneresP);
+            panel5.Controls.Add(txtTasaInteresP);
             panel5.Controls.Add(txtValorFuturo);
             panel5.Controls.Add(label7);
             panel5.Controls.Add(label8);
@@ -439,6 +441,24 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(503, 357);
             panel5.TabIndex = 2;
+            // 
+            // cmbPeriodoP
+            // 
+            cmbPeriodoP.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPeriodoP.FormattingEnabled = true;
+            cmbPeriodoP.Location = new Point(360, 218);
+            cmbPeriodoP.Name = "cmbPeriodoP";
+            cmbPeriodoP.Size = new Size(121, 33);
+            cmbPeriodoP.TabIndex = 13;
+            // 
+            // cmbInteresP
+            // 
+            cmbInteresP.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbInteresP.FormattingEnabled = true;
+            cmbInteresP.Location = new Point(360, 142);
+            cmbInteresP.Name = "cmbInteresP";
+            cmbInteresP.Size = new Size(121, 33);
+            cmbInteresP.TabIndex = 12;
             // 
             // btnLimpiarP
             // 
@@ -465,22 +485,7 @@
             btnCalcularP.TabIndex = 10;
             btnCalcularP.Text = "Calcular";
             btnCalcularP.UseVisualStyleBackColor = false;
-            // 
-            // cmbPeriodoP
-            // 
-            cmbPeriodoP.FormattingEnabled = true;
-            cmbPeriodoP.Location = new Point(360, 221);
-            cmbPeriodoP.Name = "cmbPeriodoP";
-            cmbPeriodoP.Size = new Size(121, 33);
-            cmbPeriodoP.TabIndex = 9;
-            // 
-            // cmbInteresP
-            // 
-            cmbInteresP.FormattingEnabled = true;
-            cmbInteresP.Location = new Point(360, 146);
-            cmbInteresP.Name = "cmbInteresP";
-            cmbInteresP.Size = new Size(121, 33);
-            cmbInteresP.TabIndex = 8;
+            btnCalcularP.Click += btnCalcularP_Click;
             // 
             // txtPeriodoP
             // 
@@ -491,14 +496,14 @@
             txtPeriodoP.Size = new Size(123, 26);
             txtPeriodoP.TabIndex = 7;
             // 
-            // txtTasaIneresP
+            // txtTasaInteresP
             // 
-            txtTasaIneresP.BackColor = Color.FromArgb(26, 32, 40);
-            txtTasaIneresP.BorderStyle = BorderStyle.None;
-            txtTasaIneresP.Location = new Point(217, 145);
-            txtTasaIneresP.Name = "txtTasaIneresP";
-            txtTasaIneresP.Size = new Size(123, 26);
-            txtTasaIneresP.TabIndex = 6;
+            txtTasaInteresP.BackColor = Color.FromArgb(26, 32, 40);
+            txtTasaInteresP.BorderStyle = BorderStyle.None;
+            txtTasaInteresP.Location = new Point(217, 145);
+            txtTasaInteresP.Name = "txtTasaInteresP";
+            txtTasaInteresP.Size = new Size(123, 26);
+            txtTasaInteresP.TabIndex = 6;
             // 
             // txtValorFuturo
             // 
@@ -976,6 +981,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "InteresSimple";
             Text = "InteresSimple";
+            Load += InteresSimple_Load;
             tabControl1.ResumeLayout(false);
             tbgDefinición.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1051,10 +1057,8 @@
         private Panel panel5;
         private Button btnLimpiarP;
         private Button btnCalcularP;
-        private ComboBox cmbPeriodoP;
-        private ComboBox cmbInteresP;
         private TextBox txtPeriodoP;
-        private TextBox txtTasaIneresP;
+        private TextBox txtTasaInteresP;
         private TextBox txtValorFuturo;
         private Label label7;
         private Label label8;
@@ -1100,5 +1104,7 @@
         private Button btnCalcularN;
         private TextBox txtInteresN;
         private TextBox txtValorPresenteN;
+        private ComboBox cmbPeriodoP;
+        private ComboBox cmbInteresP;
     }
 }
