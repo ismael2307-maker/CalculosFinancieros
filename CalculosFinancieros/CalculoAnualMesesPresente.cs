@@ -12,9 +12,6 @@ namespace CalculosFinancieros
             : base(valorFuturo, tasaInteres, periodo / 12)
         {
         }
-
-        
-
         public override void CalcularValorPresente()
         {
             Presente = ValorFuturo / (1 + (TasaInteres * Periodo));
