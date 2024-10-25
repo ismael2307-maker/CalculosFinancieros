@@ -215,9 +215,65 @@ namespace CalculosFinancieros
             {
                 calculoInteres = new CalculoAnualMesesInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
-            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
             {
-                calculoInteres = new CalculoAnualMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoAnualAñosInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
+
+            }else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
+            {
+                calculoInteres = new CalculoAnualSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
+            {
+                calculoInteres = new CalculoAnualTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
+            {
+                calculoInteres = new CalculoMensualAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
+            {
+                calculoInteres = new CalculoMensualMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
+            {
+                calculoInteres = new CalculoMensualSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
+            {
+                calculoInteres = new CalculoMensualTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
+            {
+                calculoInteres = new CalculoSemestralAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
+            {
+                calculoInteres = new CalculoSemestralMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
+            {
+                calculoInteres = new CalculoSemestralSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
+            {
+                calculoInteres = new CalculoSemestralTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
+            {
+                calculoInteres = new CalculoTrimestralAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
+            {
+                calculoInteres = new CalculoTrimestralMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
+            {
+                calculoInteres = new CalculoTrimestralSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
+            {
+                calculoInteres = new CalculoTrimestralTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
             }
             
 
