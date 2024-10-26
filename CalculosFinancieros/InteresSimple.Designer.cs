@@ -869,6 +869,7 @@
             btnCalcularN.TabIndex = 14;
             btnCalcularN.Text = "Calcular";
             btnCalcularN.UseVisualStyleBackColor = false;
+            btnCalcularN.Click += btnCalcularN_Click;
             // 
             // txtInteresN
             // 

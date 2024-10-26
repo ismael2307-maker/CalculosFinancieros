@@ -219,63 +219,64 @@ namespace CalculosFinancieros
             {
                 calculoInteres = new CalculoAnualAñosInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
 
-            }else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
+            }
+            else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
             {
-                calculoInteres = new CalculoAnualSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoAnualSemestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Anual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
             {
-                calculoInteres = new CalculoAnualTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoAnualTrimestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
             {
-                calculoInteres = new CalculoMensualAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoMensualAñosInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
             {
-                calculoInteres = new CalculoMensualMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoMensualMesesInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
             {
-                calculoInteres = new CalculoMensualSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoMensualSemestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Mensual") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
             {
-                calculoInteres = new CalculoMensualTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoMensualTrimestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
             {
-                calculoInteres = new CalculoSemestralAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoSemestralAñosInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
             {
-                calculoInteres = new CalculoSemestralMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoSemestralMesesInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
             {
-                calculoInteres = new CalculoSemestralSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoSemestralSemestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Semestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
             {
-                calculoInteres = new CalculoSemestralTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoSemestralTrimestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Años"))
             {
-                calculoInteres = new CalculoTrimestralAñosInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoTrimestralAñosInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Meses"))
             {
-                calculoInteres = new CalculoTrimestralMesesInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoTrimestralMesesInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Semestres"))
             {
-                calculoInteres = new CalculoTrimestralSemestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoTrimestralSemestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
             else if (cmbTipoTasaInteresSimple.SelectedItem.Equals("Trimestral") && cmbPeriodoInteresSimple.SelectedItem.Equals("Trimestres"))
             {
-                calculoInteres = new CalculoTrimestralTrimestresInteresSimple(valorPresenteIN,valorFuturoIN,periodoIN);
+                calculoInteres = new CalculoTrimestralTrimestresInteresSimple(valorPresenteIN, valorFuturoIN, periodoIN);
             }
-            
+
 
             if (calculoInteres != null)
             {
@@ -284,6 +285,22 @@ namespace CalculosFinancieros
                 dtgvResultadosInteresSimple.DataSource = null;
                 dtgvResultadosInteresSimple.DataSource = ResultadoInteresSimple.ToList();
             }
+        }
+        private List<object> ResultadosPeriodoS = new List<object>();
+        private void btnCalcularN_Click(object sender, EventArgs e)
+        {
+            double valorFuturoN = Convert.ToDouble(txtValorFuturoN.Text);
+            double valorPresenteN = Convert.ToDouble(txtValorPresenteN.Text);
+            double tasaInteres = Convert.ToDouble(txtInteresN.Text);
+
+            ICalculoPeriodoIS calculo = new CalculoBasePeriodo(valorPresenteN, valorFuturoN, tasaInteres);
+            calculo.CalculoPeriodoIS();
+
+            ResultadosPeriodoS.Add(calculo.ObtenerResultadoFormateado());
+            dtgvResultadosN.DataSource = null;
+            dtgvResultadosN.DataSource = ResultadosPeriodoS.ToList();
+
+
         }
     }
 }

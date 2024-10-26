@@ -33,13 +33,13 @@
             tbgDefinición = new TabPage();
             pictureBox1 = new PictureBox();
             tbgFuturo = new TabPage();
-            tbgPresente = new TabPage();
-            tbgTasaInteres = new TabPage();
-            tbgPeriodo = new TabPage();
             panel3 = new Panel();
             dtgvResultadosFuturoCF = new DataGridView();
             label9 = new Label();
             panel2 = new Panel();
+            groupBox1 = new GroupBox();
+            rdbNoFuturoIC = new RadioButton();
+            rdbSiFuturoIC = new RadioButton();
             btnLimpiarCF = new Button();
             btnCalcularCF = new Button();
             cmbPeriodoCF = new ComboBox();
@@ -54,6 +54,7 @@
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             label1 = new Label();
+            tbgPresente = new TabPage();
             panel4 = new Panel();
             dtgvResultadosCP = new DataGridView();
             label6 = new Label();
@@ -72,6 +73,24 @@
             panel6 = new Panel();
             pictureBox3 = new PictureBox();
             label12 = new Label();
+            tbgTasaInteres = new TabPage();
+            panel10 = new Panel();
+            dtgvResultadosCI = new DataGridView();
+            label19 = new Label();
+            panel11 = new Panel();
+            btnLimpiarCI = new Button();
+            btnCalcularCI = new Button();
+            txtPeriodoCI = new TextBox();
+            txtValorPresenteCI = new TextBox();
+            txtValorFuturoCI = new TextBox();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            label23 = new Label();
+            panel12 = new Panel();
+            pictureBox5 = new PictureBox();
+            label24 = new Label();
+            tbgPeriodo = new TabPage();
             panel7 = new Panel();
             dtgvResultadosCN = new DataGridView();
             label13 = new Label();
@@ -89,49 +108,34 @@
             panel9 = new Panel();
             pictureBox4 = new PictureBox();
             label18 = new Label();
-            panel10 = new Panel();
-            dtgvResultadosCI = new DataGridView();
-            label19 = new Label();
-            panel11 = new Panel();
-            btnLimpiarCI = new Button();
-            btnCalcularCI = new Button();
-            txtPeriodoCI = new TextBox();
-            txtValorPresenteCI = new TextBox();
-            txtValorFuturoCI = new TextBox();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            panel12 = new Panel();
-            pictureBox5 = new PictureBox();
-            label24 = new Label();
             tabControl1.SuspendLayout();
             tbgDefinición.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tbgFuturo.SuspendLayout();
-            tbgPresente.SuspendLayout();
-            tbgTasaInteres.SuspendLayout();
-            tbgPeriodo.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosFuturoCF).BeginInit();
             panel2.SuspendLayout();
+            groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tbgPresente.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCP).BeginInit();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCN).BeginInit();
-            panel8.SuspendLayout();
-            panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tbgTasaInteres.SuspendLayout();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCI).BeginInit();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            tbgPeriodo.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCN).BeginInit();
+            panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -184,42 +188,6 @@
             tbgFuturo.TabIndex = 1;
             tbgFuturo.Text = "Futuro";
             // 
-            // tbgPresente
-            // 
-            tbgPresente.BackColor = Color.FromArgb(26, 32, 40);
-            tbgPresente.Controls.Add(panel4);
-            tbgPresente.Controls.Add(panel5);
-            tbgPresente.Controls.Add(panel6);
-            tbgPresente.Location = new Point(4, 34);
-            tbgPresente.Name = "tbgPresente";
-            tbgPresente.Size = new Size(1056, 535);
-            tbgPresente.TabIndex = 2;
-            tbgPresente.Text = "Presente";
-            // 
-            // tbgTasaInteres
-            // 
-            tbgTasaInteres.BackColor = Color.FromArgb(26, 32, 40);
-            tbgTasaInteres.Controls.Add(panel10);
-            tbgTasaInteres.Controls.Add(panel11);
-            tbgTasaInteres.Controls.Add(panel12);
-            tbgTasaInteres.Location = new Point(4, 34);
-            tbgTasaInteres.Name = "tbgTasaInteres";
-            tbgTasaInteres.Size = new Size(1056, 535);
-            tbgTasaInteres.TabIndex = 3;
-            tbgTasaInteres.Text = "Tasa Interes";
-            // 
-            // tbgPeriodo
-            // 
-            tbgPeriodo.BackColor = Color.FromArgb(26, 32, 40);
-            tbgPeriodo.Controls.Add(panel7);
-            tbgPeriodo.Controls.Add(panel8);
-            tbgPeriodo.Controls.Add(panel9);
-            tbgPeriodo.Location = new Point(4, 34);
-            tbgPeriodo.Name = "tbgPeriodo";
-            tbgPeriodo.Size = new Size(1056, 535);
-            tbgPeriodo.TabIndex = 4;
-            tbgPeriodo.Text = "Periodo";
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(51, 51, 51);
@@ -253,6 +221,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(51, 51, 51);
+            panel2.Controls.Add(groupBox1);
             panel2.Controls.Add(btnLimpiarCF);
             panel2.Controls.Add(btnCalcularCF);
             panel2.Controls.Add(cmbPeriodoCF);
@@ -269,13 +238,46 @@
             panel2.Size = new Size(503, 357);
             panel2.TabIndex = 4;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbNoFuturoIC);
+            groupBox1.Controls.Add(rdbSiFuturoIC);
+            groupBox1.Location = new Point(329, 48);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(163, 100);
+            groupBox1.TabIndex = 12;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Capitalizacion";
+            // 
+            // rdbNoFuturoIC
+            // 
+            rdbNoFuturoIC.AutoSize = true;
+            rdbNoFuturoIC.Location = new Point(13, 65);
+            rdbNoFuturoIC.Name = "rdbNoFuturoIC";
+            rdbNoFuturoIC.Size = new Size(55, 29);
+            rdbNoFuturoIC.TabIndex = 1;
+            rdbNoFuturoIC.TabStop = true;
+            rdbNoFuturoIC.Text = "No";
+            rdbNoFuturoIC.UseVisualStyleBackColor = true;
+            // 
+            // rdbSiFuturoIC
+            // 
+            rdbSiFuturoIC.AutoSize = true;
+            rdbSiFuturoIC.Location = new Point(13, 32);
+            rdbSiFuturoIC.Name = "rdbSiFuturoIC";
+            rdbSiFuturoIC.Size = new Size(45, 29);
+            rdbSiFuturoIC.TabIndex = 0;
+            rdbSiFuturoIC.TabStop = true;
+            rdbSiFuturoIC.Text = "Si";
+            rdbSiFuturoIC.UseVisualStyleBackColor = true;
+            // 
             // btnLimpiarCF
             // 
             btnLimpiarCF.BackColor = Color.FromArgb(26, 32, 40);
             btnLimpiarCF.FlatAppearance.BorderSize = 0;
             btnLimpiarCF.FlatStyle = FlatStyle.Flat;
             btnLimpiarCF.ForeColor = Color.White;
-            btnLimpiarCF.Location = new Point(283, 290);
+            btnLimpiarCF.Location = new Point(267, 304);
             btnLimpiarCF.Name = "btnLimpiarCF";
             btnLimpiarCF.Size = new Size(98, 32);
             btnLimpiarCF.TabIndex = 11;
@@ -288,17 +290,19 @@
             btnCalcularCF.FlatAppearance.BorderSize = 0;
             btnCalcularCF.FlatStyle = FlatStyle.Flat;
             btnCalcularCF.ForeColor = Color.White;
-            btnCalcularCF.Location = new Point(150, 290);
+            btnCalcularCF.Location = new Point(122, 304);
             btnCalcularCF.Name = "btnCalcularCF";
             btnCalcularCF.Size = new Size(98, 32);
             btnCalcularCF.TabIndex = 10;
             btnCalcularCF.Text = "Calcular";
             btnCalcularCF.UseVisualStyleBackColor = false;
+            btnCalcularCF.Click += btnCalcularCF_Click;
             // 
             // cmbPeriodoCF
             // 
             cmbPeriodoCF.FormattingEnabled = true;
-            cmbPeriodoCF.Location = new Point(360, 221);
+            cmbPeriodoCF.Items.AddRange(new object[] { "Años", "Meses", "Semestres", "Trimestres" });
+            cmbPeriodoCF.Location = new Point(342, 247);
             cmbPeriodoCF.Name = "cmbPeriodoCF";
             cmbPeriodoCF.Size = new Size(121, 33);
             cmbPeriodoCF.TabIndex = 9;
@@ -306,7 +310,8 @@
             // cmbInteresCF
             // 
             cmbInteresCF.FormattingEnabled = true;
-            cmbInteresCF.Location = new Point(360, 146);
+            cmbInteresCF.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
+            cmbInteresCF.Location = new Point(342, 172);
             cmbInteresCF.Name = "cmbInteresCF";
             cmbInteresCF.Size = new Size(121, 33);
             cmbInteresCF.TabIndex = 8;
@@ -315,7 +320,7 @@
             // 
             txtPeriodoCF.BackColor = Color.FromArgb(26, 32, 40);
             txtPeriodoCF.BorderStyle = BorderStyle.None;
-            txtPeriodoCF.Location = new Point(217, 221);
+            txtPeriodoCF.Location = new Point(199, 247);
             txtPeriodoCF.Name = "txtPeriodoCF";
             txtPeriodoCF.Size = new Size(123, 26);
             txtPeriodoCF.TabIndex = 7;
@@ -324,7 +329,7 @@
             // 
             txtTasaInteresCF.BackColor = Color.FromArgb(26, 32, 40);
             txtTasaInteresCF.BorderStyle = BorderStyle.None;
-            txtTasaInteresCF.Location = new Point(217, 145);
+            txtTasaInteresCF.Location = new Point(199, 171);
             txtTasaInteresCF.Name = "txtTasaInteresCF";
             txtTasaInteresCF.Size = new Size(123, 26);
             txtTasaInteresCF.TabIndex = 6;
@@ -333,7 +338,7 @@
             // 
             txtValorPresenteCF.BackColor = Color.FromArgb(26, 32, 40);
             txtValorPresenteCF.BorderStyle = BorderStyle.None;
-            txtValorPresenteCF.Location = new Point(217, 71);
+            txtValorPresenteCF.Location = new Point(199, 97);
             txtValorPresenteCF.Name = "txtValorPresenteCF";
             txtValorPresenteCF.Size = new Size(123, 26);
             txtValorPresenteCF.TabIndex = 5;
@@ -343,7 +348,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(31, 220);
+            label5.Location = new Point(13, 246);
             label5.Name = "label5";
             label5.Size = new Size(88, 30);
             label5.TabIndex = 4;
@@ -354,7 +359,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(31, 145);
+            label4.Location = new Point(13, 171);
             label4.Name = "label4";
             label4.Size = new Size(127, 30);
             label4.TabIndex = 3;
@@ -365,7 +370,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(31, 70);
+            label3.Location = new Point(13, 96);
             label3.Name = "label3";
             label3.Size = new Size(180, 30);
             label3.TabIndex = 2;
@@ -376,7 +381,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(67, 235, 103);
-            label2.Location = new Point(133, 12);
+            label2.Location = new Point(133, 0);
             label2.Name = "label2";
             label2.Size = new Size(266, 45);
             label2.TabIndex = 1;
@@ -412,6 +417,18 @@
             label1.Size = new Size(145, 45);
             label1.TabIndex = 0;
             label1.Text = "Ecuación";
+            // 
+            // tbgPresente
+            // 
+            tbgPresente.BackColor = Color.FromArgb(26, 32, 40);
+            tbgPresente.Controls.Add(panel4);
+            tbgPresente.Controls.Add(panel5);
+            tbgPresente.Controls.Add(panel6);
+            tbgPresente.Location = new Point(4, 34);
+            tbgPresente.Name = "tbgPresente";
+            tbgPresente.Size = new Size(1056, 535);
+            tbgPresente.TabIndex = 2;
+            tbgPresente.Text = "Presente";
             // 
             // panel4
             // 
@@ -606,6 +623,205 @@
             label12.TabIndex = 0;
             label12.Text = "Ecuación";
             // 
+            // tbgTasaInteres
+            // 
+            tbgTasaInteres.BackColor = Color.FromArgb(26, 32, 40);
+            tbgTasaInteres.Controls.Add(panel10);
+            tbgTasaInteres.Controls.Add(panel11);
+            tbgTasaInteres.Controls.Add(panel12);
+            tbgTasaInteres.Location = new Point(4, 34);
+            tbgTasaInteres.Name = "tbgTasaInteres";
+            tbgTasaInteres.Size = new Size(1056, 535);
+            tbgTasaInteres.TabIndex = 3;
+            tbgTasaInteres.Text = "Tasa Interes";
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.FromArgb(51, 51, 51);
+            panel10.Controls.Add(dtgvResultadosCI);
+            panel10.Controls.Add(label19);
+            panel10.Location = new Point(538, 178);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(503, 357);
+            panel10.TabIndex = 11;
+            // 
+            // dtgvResultadosCI
+            // 
+            dtgvResultadosCI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvResultadosCI.Location = new Point(18, 96);
+            dtgvResultadosCI.Name = "dtgvResultadosCI";
+            dtgvResultadosCI.ScrollBars = ScrollBars.Vertical;
+            dtgvResultadosCI.Size = new Size(466, 188);
+            dtgvResultadosCI.TabIndex = 2;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.FromArgb(67, 235, 103);
+            label19.Location = new Point(173, 12);
+            label19.Name = "label19";
+            label19.Size = new Size(174, 45);
+            label19.TabIndex = 1;
+            label19.Text = "Resultados";
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(51, 51, 51);
+            panel11.Controls.Add(btnLimpiarCI);
+            panel11.Controls.Add(btnCalcularCI);
+            panel11.Controls.Add(txtPeriodoCI);
+            panel11.Controls.Add(txtValorPresenteCI);
+            panel11.Controls.Add(txtValorFuturoCI);
+            panel11.Controls.Add(label20);
+            panel11.Controls.Add(label21);
+            panel11.Controls.Add(label22);
+            panel11.Controls.Add(label23);
+            panel11.Location = new Point(16, 178);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(503, 357);
+            panel11.TabIndex = 10;
+            // 
+            // btnLimpiarCI
+            // 
+            btnLimpiarCI.BackColor = Color.FromArgb(26, 32, 40);
+            btnLimpiarCI.FlatAppearance.BorderSize = 0;
+            btnLimpiarCI.FlatStyle = FlatStyle.Flat;
+            btnLimpiarCI.ForeColor = Color.White;
+            btnLimpiarCI.Location = new Point(283, 290);
+            btnLimpiarCI.Name = "btnLimpiarCI";
+            btnLimpiarCI.Size = new Size(98, 32);
+            btnLimpiarCI.TabIndex = 11;
+            btnLimpiarCI.Text = "LImpiar";
+            btnLimpiarCI.UseVisualStyleBackColor = false;
+            // 
+            // btnCalcularCI
+            // 
+            btnCalcularCI.BackColor = Color.FromArgb(26, 32, 40);
+            btnCalcularCI.FlatAppearance.BorderSize = 0;
+            btnCalcularCI.FlatStyle = FlatStyle.Flat;
+            btnCalcularCI.ForeColor = Color.White;
+            btnCalcularCI.Location = new Point(150, 290);
+            btnCalcularCI.Name = "btnCalcularCI";
+            btnCalcularCI.Size = new Size(98, 32);
+            btnCalcularCI.TabIndex = 10;
+            btnCalcularCI.Text = "Calcular";
+            btnCalcularCI.UseVisualStyleBackColor = false;
+            // 
+            // txtPeriodoCI
+            // 
+            txtPeriodoCI.BackColor = Color.FromArgb(26, 32, 40);
+            txtPeriodoCI.BorderStyle = BorderStyle.None;
+            txtPeriodoCI.Location = new Point(217, 221);
+            txtPeriodoCI.Name = "txtPeriodoCI";
+            txtPeriodoCI.Size = new Size(123, 26);
+            txtPeriodoCI.TabIndex = 7;
+            // 
+            // txtValorPresenteCI
+            // 
+            txtValorPresenteCI.BackColor = Color.FromArgb(26, 32, 40);
+            txtValorPresenteCI.BorderStyle = BorderStyle.None;
+            txtValorPresenteCI.Location = new Point(217, 145);
+            txtValorPresenteCI.Name = "txtValorPresenteCI";
+            txtValorPresenteCI.Size = new Size(123, 26);
+            txtValorPresenteCI.TabIndex = 6;
+            // 
+            // txtValorFuturoCI
+            // 
+            txtValorFuturoCI.BackColor = Color.FromArgb(26, 32, 40);
+            txtValorFuturoCI.BorderStyle = BorderStyle.None;
+            txtValorFuturoCI.Location = new Point(217, 71);
+            txtValorFuturoCI.Name = "txtValorFuturoCI";
+            txtValorFuturoCI.Size = new Size(123, 26);
+            txtValorFuturoCI.TabIndex = 5;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 15.75F);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(31, 220);
+            label20.Name = "label20";
+            label20.Size = new Size(88, 30);
+            label20.TabIndex = 4;
+            label20.Text = "Periodo:";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 15.75F);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(31, 145);
+            label21.Name = "label21";
+            label21.Size = new Size(180, 30);
+            label21.TabIndex = 3;
+            label21.Text = "Valor Presente C$:";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 15.75F);
+            label22.ForeColor = Color.White;
+            label22.Location = new Point(31, 70);
+            label22.Name = "label22";
+            label22.Size = new Size(160, 30);
+            label22.TabIndex = 2;
+            label22.Text = "Valor Futuro C$:";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.ForeColor = Color.FromArgb(67, 235, 103);
+            label23.Location = new Point(133, 12);
+            label23.Name = "label23";
+            label23.Size = new Size(266, 45);
+            label23.TabIndex = 1;
+            label23.Text = "Ingrese los Datos";
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.FromArgb(51, 51, 51);
+            panel12.Controls.Add(pictureBox5);
+            panel12.Controls.Add(label24);
+            panel12.Location = new Point(345, 0);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(413, 172);
+            panel12.TabIndex = 9;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(44, 62);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(335, 81);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label24.ForeColor = Color.FromArgb(67, 235, 103);
+            label24.Location = new Point(146, 14);
+            label24.Name = "label24";
+            label24.Size = new Size(145, 45);
+            label24.TabIndex = 0;
+            label24.Text = "Ecuación";
+            // 
+            // tbgPeriodo
+            // 
+            tbgPeriodo.BackColor = Color.FromArgb(26, 32, 40);
+            tbgPeriodo.Controls.Add(panel7);
+            tbgPeriodo.Controls.Add(panel8);
+            tbgPeriodo.Controls.Add(panel9);
+            tbgPeriodo.Location = new Point(4, 34);
+            tbgPeriodo.Name = "tbgPeriodo";
+            tbgPeriodo.Size = new Size(1056, 535);
+            tbgPeriodo.TabIndex = 4;
+            tbgPeriodo.Text = "Periodo";
+            // 
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(51, 51, 51);
@@ -790,181 +1006,6 @@
             label18.TabIndex = 0;
             label18.Text = "Ecuación";
             // 
-            // panel10
-            // 
-            panel10.BackColor = Color.FromArgb(51, 51, 51);
-            panel10.Controls.Add(dtgvResultadosCI);
-            panel10.Controls.Add(label19);
-            panel10.Location = new Point(538, 178);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(503, 357);
-            panel10.TabIndex = 11;
-            // 
-            // dtgvResultadosCI
-            // 
-            dtgvResultadosCI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvResultadosCI.Location = new Point(18, 96);
-            dtgvResultadosCI.Name = "dtgvResultadosCI";
-            dtgvResultadosCI.ScrollBars = ScrollBars.Vertical;
-            dtgvResultadosCI.Size = new Size(466, 188);
-            dtgvResultadosCI.TabIndex = 2;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.FromArgb(67, 235, 103);
-            label19.Location = new Point(173, 12);
-            label19.Name = "label19";
-            label19.Size = new Size(174, 45);
-            label19.TabIndex = 1;
-            label19.Text = "Resultados";
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.FromArgb(51, 51, 51);
-            panel11.Controls.Add(btnLimpiarCI);
-            panel11.Controls.Add(btnCalcularCI);
-            panel11.Controls.Add(txtPeriodoCI);
-            panel11.Controls.Add(txtValorPresenteCI);
-            panel11.Controls.Add(txtValorFuturoCI);
-            panel11.Controls.Add(label20);
-            panel11.Controls.Add(label21);
-            panel11.Controls.Add(label22);
-            panel11.Controls.Add(label23);
-            panel11.Location = new Point(16, 178);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(503, 357);
-            panel11.TabIndex = 10;
-            // 
-            // btnLimpiarCI
-            // 
-            btnLimpiarCI.BackColor = Color.FromArgb(26, 32, 40);
-            btnLimpiarCI.FlatAppearance.BorderSize = 0;
-            btnLimpiarCI.FlatStyle = FlatStyle.Flat;
-            btnLimpiarCI.ForeColor = Color.White;
-            btnLimpiarCI.Location = new Point(283, 290);
-            btnLimpiarCI.Name = "btnLimpiarCI";
-            btnLimpiarCI.Size = new Size(98, 32);
-            btnLimpiarCI.TabIndex = 11;
-            btnLimpiarCI.Text = "LImpiar";
-            btnLimpiarCI.UseVisualStyleBackColor = false;
-            // 
-            // btnCalcularCI
-            // 
-            btnCalcularCI.BackColor = Color.FromArgb(26, 32, 40);
-            btnCalcularCI.FlatAppearance.BorderSize = 0;
-            btnCalcularCI.FlatStyle = FlatStyle.Flat;
-            btnCalcularCI.ForeColor = Color.White;
-            btnCalcularCI.Location = new Point(150, 290);
-            btnCalcularCI.Name = "btnCalcularCI";
-            btnCalcularCI.Size = new Size(98, 32);
-            btnCalcularCI.TabIndex = 10;
-            btnCalcularCI.Text = "Calcular";
-            btnCalcularCI.UseVisualStyleBackColor = false;
-            // 
-            // txtPeriodoCI
-            // 
-            txtPeriodoCI.BackColor = Color.FromArgb(26, 32, 40);
-            txtPeriodoCI.BorderStyle = BorderStyle.None;
-            txtPeriodoCI.Location = new Point(217, 221);
-            txtPeriodoCI.Name = "txtPeriodoCI";
-            txtPeriodoCI.Size = new Size(123, 26);
-            txtPeriodoCI.TabIndex = 7;
-            // 
-            // txtValorPresenteCI
-            // 
-            txtValorPresenteCI.BackColor = Color.FromArgb(26, 32, 40);
-            txtValorPresenteCI.BorderStyle = BorderStyle.None;
-            txtValorPresenteCI.Location = new Point(217, 145);
-            txtValorPresenteCI.Name = "txtValorPresenteCI";
-            txtValorPresenteCI.Size = new Size(123, 26);
-            txtValorPresenteCI.TabIndex = 6;
-            // 
-            // txtValorFuturoCI
-            // 
-            txtValorFuturoCI.BackColor = Color.FromArgb(26, 32, 40);
-            txtValorFuturoCI.BorderStyle = BorderStyle.None;
-            txtValorFuturoCI.Location = new Point(217, 71);
-            txtValorFuturoCI.Name = "txtValorFuturoCI";
-            txtValorFuturoCI.Size = new Size(123, 26);
-            txtValorFuturoCI.TabIndex = 5;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 15.75F);
-            label20.ForeColor = Color.White;
-            label20.Location = new Point(31, 220);
-            label20.Name = "label20";
-            label20.Size = new Size(88, 30);
-            label20.TabIndex = 4;
-            label20.Text = "Periodo:";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 15.75F);
-            label21.ForeColor = Color.White;
-            label21.Location = new Point(31, 145);
-            label21.Name = "label21";
-            label21.Size = new Size(180, 30);
-            label21.TabIndex = 3;
-            label21.Text = "Valor Presente C$:";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 15.75F);
-            label22.ForeColor = Color.White;
-            label22.Location = new Point(31, 70);
-            label22.Name = "label22";
-            label22.Size = new Size(160, 30);
-            label22.TabIndex = 2;
-            label22.Text = "Valor Futuro C$:";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.FromArgb(67, 235, 103);
-            label23.Location = new Point(133, 12);
-            label23.Name = "label23";
-            label23.Size = new Size(266, 45);
-            label23.TabIndex = 1;
-            label23.Text = "Ingrese los Datos";
-            // 
-            // panel12
-            // 
-            panel12.BackColor = Color.FromArgb(51, 51, 51);
-            panel12.Controls.Add(pictureBox5);
-            panel12.Controls.Add(label24);
-            panel12.Location = new Point(345, 0);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(413, 172);
-            panel12.TabIndex = 9;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(44, 62);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(335, 81);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label24.ForeColor = Color.FromArgb(67, 235, 103);
-            label24.Location = new Point(146, 14);
-            label24.Name = "label24";
-            label24.Size = new Size(145, 45);
-            label24.TabIndex = 0;
-            label24.Text = "Ecuación";
-            // 
             // frmInteresCompuesto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -978,17 +1019,17 @@
             tbgDefinición.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tbgFuturo.ResumeLayout(false);
-            tbgPresente.ResumeLayout(false);
-            tbgTasaInteres.ResumeLayout(false);
-            tbgPeriodo.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosFuturoCF).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            tbgPresente.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCP).EndInit();
@@ -997,14 +1038,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCN).EndInit();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tbgTasaInteres.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCI).EndInit();
@@ -1013,6 +1047,15 @@
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            tbgPeriodo.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCN).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -1094,5 +1137,8 @@
         private Panel panel9;
         private PictureBox pictureBox4;
         private Label label18;
+        private GroupBox groupBox1;
+        private RadioButton rdbNoFuturoIC;
+        private RadioButton rdbSiFuturoIC;
     }
 }
