@@ -242,6 +242,7 @@
             // 
             groupBox1.Controls.Add(rdbNoFuturoIC);
             groupBox1.Controls.Add(rdbSiFuturoIC);
+            groupBox1.ForeColor = Color.FromArgb(67, 235, 103);
             groupBox1.Location = new Point(329, 48);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(163, 100);

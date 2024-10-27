@@ -43,7 +43,68 @@ namespace CalculosFinancieros
                     {
                         calculo = new CalculoMensualAñosConCapitalizacion(valorPresente,tasaInteres,periodo);
                     }
+                    else if (cmbInteresCF.SelectedItem.Equals("Mensual") && cmbPeriodoCF.SelectedItem.Equals("Meses"))
+                    {
+                        calculo = new CalculoMensualMesesConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Mensual") && cmbPeriodoCF.SelectedItem.Equals("Semestres"))
+                    {
+                        calculo = new CalculoMensualSemestresConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Mensual") && cmbPeriodoCF.SelectedItem.Equals("Trimestres"))
+                    {
+                        calculo = new CalculoMensualTrimestresConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Anual") && cmbPeriodoCF.SelectedItem.Equals("Años"))
+                    {
+                        calculo = new CalculoAnualAñosConCapitalizacion(valorPresente, tasaInteres,periodo);    
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Anual") && cmbPeriodoCF.SelectedItem.Equals("Meses"))
+                    {
+                        calculo = new CalculoAnualMesesConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if(cmbInteresCF.SelectedItem.Equals("Anual") && cmbPeriodoCF.SelectedItem.Equals("Semestres"))
+                    {
+                        calculo = new CalculoAnualSemestresConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Anual") && cmbPeriodoCF.SelectedItem.Equals("Trimestres"))
+                    {
+                        calculo = new CalculoAnualTrimestresConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Semestral") && cmbPeriodoCF.SelectedItem.Equals("Años"))
+                    {
+                        calculo = new CalculoSemestralAñosConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Semestral") && cmbPeriodoCF.SelectedItem.Equals("Meses"))
+                    {
+                        calculo = new CalculoSemestralMesesConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Semestral") && cmbPeriodoCF.SelectedItem.Equals("Semestres"))
+                    {
+                        calculo = new CalculoSemestralSemestresConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Semestral") && cmbPeriodoCF.SelectedItem.Equals("Trimestres"))
+                    {
+                        calculo = new CalculoSemestralTrimestresConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Trimestral") && cmbPeriodoCF.SelectedItem.Equals("Años"))
+                    {
+                        calculo = new CalculoTrimestralAñosConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Trimestral") && cmbPeriodoCF.SelectedItem.Equals("Meses"))
+                    {
+                        calculo = new CalculoTrimestralMesesConCapitalizacion(valorPresente,tasaInteres,periodo);
+                    }
+                    else if(cmbInteresCF.SelectedItem.Equals("Trimestral") && cmbPeriodoCF.SelectedItem.Equals("Semestres"))
+                    {
+                        calculo = new CalculoTrimestralSemestresConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
+                    else if (cmbInteresCF.SelectedItem.Equals("Trimestral") && cmbPeriodoCF.SelectedItem.Equals("Trimestres"))
+                    {
+                        calculo = new CalculoTrimestralTrimestresConCapitalizacion(valorPresente, tasaInteres, periodo);
+                    }
                 }
+                
             }
 
             if (calculo != null)

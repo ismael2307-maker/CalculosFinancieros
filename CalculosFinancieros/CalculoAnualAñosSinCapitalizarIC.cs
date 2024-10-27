@@ -162,9 +162,9 @@ namespace CalculosFinancieros
         }
     }
     //Tasa Anual
-    public class CalculoSemestralTrimestralConCapitalizacion : CalculoBaseFuturoIC
+    public class CalculoSemestralTrimestresConCapitalizacion : CalculoBaseFuturoIC
     {
-        public CalculoSemestralTrimestralConCapitalizacion(double valorPresente, double tasaInteres, double periodo) 
+        public CalculoSemestralTrimestresConCapitalizacion(double valorPresente, double tasaInteres, double periodo) 
             : base(valorPresente, tasaInteres / 2, periodo / 2)
         {
         }
