@@ -6,35 +6,26 @@ using System.Threading.Tasks;
 
 namespace CalculosFinancieros
 {
-    public abstract class CalculoBaseFuturoIC : ICalcularValorFuturoIC
+    public abstract class CalculoBaseFuturoIC : ICalculoFuturoIC
     {
+        public decimal ValorPresente {  get; set; }
+        public decimal Interes {  get; set; }
+        public int Periodo { get;set; }
+        public decimal ValorFuturo {  get; protected set; }
 
-        protected double ValorPresente;
-        protected double TasaInteres;
-        protected double Periodo;
-        protected double Futuro;
-
-        public CalculoBaseFuturoIC(double valorPresente, double tasaInteres,double periodo)
-        {
-            ValorPresente = valorPresente;
-            TasaInteres = tasaInteres / 100;
-            Periodo = periodo;
-
-        }
-        public abstract void CalcularValorFuturoIC();
+        public abstract decimal CalculoFuturoIC();
         
-
         public object ObtenerResultadoFormateado()
         {
-            string formattedP = ValorPresente.ToString("N0");
-            string formattedF = Futuro.ToString("N0");
+            string formattedPresente = ValorPresente.ToString("N0");
+            string formattedFuturo = ValorFuturo.ToString("N0");
 
             return new
             {
-                Presente = "C$ "+formattedP,
-                Interes = TasaInteres * 100,
+                Presente = "C$ "+formattedPresente,
+                Interes = Interes,
                 Periodo = Periodo,
-                Futuro = "C$ "+formattedF
+                Futuro = "C$ "+formattedFuturo
             };
         }
     }

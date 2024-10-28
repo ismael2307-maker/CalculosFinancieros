@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CalculosFinancieros
 {
-    public interface ICalcularValorFuturoIC
+    public interface ICalculoFuturoIC
     {
-        void CalcularValorFuturoIC();
+        decimal CalculoFuturoIC();
         object ObtenerResultadoFormateado();
     }
 }
