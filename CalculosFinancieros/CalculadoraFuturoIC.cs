@@ -42,6 +42,42 @@ namespace CalculosFinancieros
             {
                 return interes * 3;
             }
+            else if (de == "Anual" && a == "Mensual")
+            {
+                return interes / 12;
+            }
+            else if (de == "Anual" && a == "Semestral")
+            {
+                return interes / 2;
+            }
+            else if (de == "Anual" && a == "Trimestral")
+            {
+                return interes / 4;
+            }
+            else if(de == "Semestral" && a == "Anual")
+            {
+                return interes * 2;
+            }
+            else if (de == "Semestral" && a == "Mensual")
+            {
+                return interes /6;
+            }
+            else if (de == "Semestral" && a == "Trimestral")
+            {
+                return interes / 2;
+            }
+            else if (de == "Trimestral" && a == "Anual")
+            {
+                return interes * 4;
+            }
+            else if (de == "Trimestral" && a == "Mensual")
+            {
+                return interes / 3;
+            }
+            else if (de == "Trimestral" && a == "Semestral")
+            {
+                return interes * 2;
+            }
             else
             {
                 return interes;
