@@ -56,13 +56,16 @@
             label1 = new Label();
             tbgPresente = new TabPage();
             panel4 = new Panel();
-            dtgvResultadosCP = new DataGridView();
+            dtgvResultadosPresenteCP = new DataGridView();
             label6 = new Label();
             panel5 = new Panel();
+            groupBox2 = new GroupBox();
+            cmbConvertibleAFuturoIC = new ComboBox();
+            label27 = new Label();
+            cmbTipoTasaFuturoIC = new ComboBox();
+            label28 = new Label();
             btnLimpiarCP = new Button();
             btnCalcularCP = new Button();
-            cmbPeriodoCP = new ComboBox();
-            cmbInteresCP = new ComboBox();
             txtPeriodoCP = new TextBox();
             txtTasaInteresCP = new TextBox();
             txtValorFuturoCP = new TextBox();
@@ -120,8 +123,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tbgPresente.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvResultadosPresenteCP).BeginInit();
             panel5.SuspendLayout();
+            groupBox2.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             tbgTasaInteres.SuspendLayout();
@@ -431,21 +435,21 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(51, 51, 51);
-            panel4.Controls.Add(dtgvResultadosCP);
+            panel4.Controls.Add(dtgvResultadosPresenteCP);
             panel4.Controls.Add(label6);
             panel4.Location = new Point(538, 178);
             panel4.Name = "panel4";
             panel4.Size = new Size(503, 357);
             panel4.TabIndex = 8;
             // 
-            // dtgvResultadosCP
+            // dtgvResultadosPresenteCP
             // 
-            dtgvResultadosCP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvResultadosCP.Location = new Point(18, 96);
-            dtgvResultadosCP.Name = "dtgvResultadosCP";
-            dtgvResultadosCP.ScrollBars = ScrollBars.Vertical;
-            dtgvResultadosCP.Size = new Size(466, 188);
-            dtgvResultadosCP.TabIndex = 2;
+            dtgvResultadosPresenteCP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvResultadosPresenteCP.Location = new Point(18, 96);
+            dtgvResultadosPresenteCP.Name = "dtgvResultadosPresenteCP";
+            dtgvResultadosPresenteCP.ScrollBars = ScrollBars.Vertical;
+            dtgvResultadosPresenteCP.Size = new Size(466, 188);
+            dtgvResultadosPresenteCP.TabIndex = 2;
             // 
             // label6
             // 
@@ -461,10 +465,9 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(51, 51, 51);
+            panel5.Controls.Add(groupBox2);
             panel5.Controls.Add(btnLimpiarCP);
             panel5.Controls.Add(btnCalcularCP);
-            panel5.Controls.Add(cmbPeriodoCP);
-            panel5.Controls.Add(cmbInteresCP);
             panel5.Controls.Add(txtPeriodoCP);
             panel5.Controls.Add(txtTasaInteresCP);
             panel5.Controls.Add(txtValorFuturoCP);
@@ -474,8 +477,59 @@
             panel5.Controls.Add(label11);
             panel5.Location = new Point(16, 178);
             panel5.Name = "panel5";
-            panel5.Size = new Size(503, 357);
+            panel5.Size = new Size(516, 357);
             panel5.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(cmbConvertibleAFuturoIC);
+            groupBox2.Controls.Add(label27);
+            groupBox2.Controls.Add(cmbTipoTasaFuturoIC);
+            groupBox2.Controls.Add(label28);
+            groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(299, 70);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(204, 153);
+            groupBox2.TabIndex = 13;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Capitalizacion De Tasa";
+            // 
+            // cmbConvertibleAFuturoIC
+            // 
+            cmbConvertibleAFuturoIC.FormattingEnabled = true;
+            cmbConvertibleAFuturoIC.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
+            cmbConvertibleAFuturoIC.Location = new Point(8, 114);
+            cmbConvertibleAFuturoIC.Name = "cmbConvertibleAFuturoIC";
+            cmbConvertibleAFuturoIC.Size = new Size(180, 29);
+            cmbConvertibleAFuturoIC.TabIndex = 3;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(8, 90);
+            label27.Name = "label27";
+            label27.Size = new Size(105, 21);
+            label27.TabIndex = 2;
+            label27.Text = "Convertible a:";
+            // 
+            // cmbTipoTasaFuturoIC
+            // 
+            cmbTipoTasaFuturoIC.FormattingEnabled = true;
+            cmbTipoTasaFuturoIC.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
+            cmbTipoTasaFuturoIC.Location = new Point(8, 49);
+            cmbTipoTasaFuturoIC.Name = "cmbTipoTasaFuturoIC";
+            cmbTipoTasaFuturoIC.Size = new Size(180, 29);
+            cmbTipoTasaFuturoIC.TabIndex = 1;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(8, 25);
+            label28.Name = "label28";
+            label28.Size = new Size(32, 21);
+            label28.TabIndex = 0;
+            label28.Text = "De:";
             // 
             // btnLimpiarCP
             // 
@@ -483,7 +537,7 @@
             btnLimpiarCP.FlatAppearance.BorderSize = 0;
             btnLimpiarCP.FlatStyle = FlatStyle.Flat;
             btnLimpiarCP.ForeColor = Color.White;
-            btnLimpiarCP.Location = new Point(283, 290);
+            btnLimpiarCP.Location = new Point(250, 290);
             btnLimpiarCP.Name = "btnLimpiarCP";
             btnLimpiarCP.Size = new Size(98, 32);
             btnLimpiarCP.TabIndex = 11;
@@ -496,34 +550,19 @@
             btnCalcularCP.FlatAppearance.BorderSize = 0;
             btnCalcularCP.FlatStyle = FlatStyle.Flat;
             btnCalcularCP.ForeColor = Color.White;
-            btnCalcularCP.Location = new Point(150, 290);
+            btnCalcularCP.Location = new Point(96, 290);
             btnCalcularCP.Name = "btnCalcularCP";
             btnCalcularCP.Size = new Size(98, 32);
             btnCalcularCP.TabIndex = 10;
             btnCalcularCP.Text = "Calcular";
             btnCalcularCP.UseVisualStyleBackColor = false;
-            // 
-            // cmbPeriodoCP
-            // 
-            cmbPeriodoCP.FormattingEnabled = true;
-            cmbPeriodoCP.Location = new Point(360, 221);
-            cmbPeriodoCP.Name = "cmbPeriodoCP";
-            cmbPeriodoCP.Size = new Size(121, 33);
-            cmbPeriodoCP.TabIndex = 9;
-            // 
-            // cmbInteresCP
-            // 
-            cmbInteresCP.FormattingEnabled = true;
-            cmbInteresCP.Location = new Point(360, 146);
-            cmbInteresCP.Name = "cmbInteresCP";
-            cmbInteresCP.Size = new Size(121, 33);
-            cmbInteresCP.TabIndex = 8;
+            btnCalcularCP.Click += Calcular;
             // 
             // txtPeriodoCP
             // 
             txtPeriodoCP.BackColor = Color.FromArgb(26, 32, 40);
             txtPeriodoCP.BorderStyle = BorderStyle.None;
-            txtPeriodoCP.Location = new Point(217, 221);
+            txtPeriodoCP.Location = new Point(169, 220);
             txtPeriodoCP.Name = "txtPeriodoCP";
             txtPeriodoCP.Size = new Size(123, 26);
             txtPeriodoCP.TabIndex = 7;
@@ -532,7 +571,7 @@
             // 
             txtTasaInteresCP.BackColor = Color.FromArgb(26, 32, 40);
             txtTasaInteresCP.BorderStyle = BorderStyle.None;
-            txtTasaInteresCP.Location = new Point(217, 145);
+            txtTasaInteresCP.Location = new Point(169, 145);
             txtTasaInteresCP.Name = "txtTasaInteresCP";
             txtTasaInteresCP.Size = new Size(123, 26);
             txtTasaInteresCP.TabIndex = 6;
@@ -541,7 +580,7 @@
             // 
             txtValorFuturoCP.BackColor = Color.FromArgb(26, 32, 40);
             txtValorFuturoCP.BorderStyle = BorderStyle.None;
-            txtValorFuturoCP.Location = new Point(217, 71);
+            txtValorFuturoCP.Location = new Point(169, 74);
             txtValorFuturoCP.Name = "txtValorFuturoCP";
             txtValorFuturoCP.Size = new Size(123, 26);
             txtValorFuturoCP.TabIndex = 5;
@@ -551,7 +590,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(31, 220);
+            label7.Location = new Point(3, 220);
             label7.Name = "label7";
             label7.Size = new Size(88, 30);
             label7.TabIndex = 4;
@@ -562,7 +601,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(31, 145);
+            label8.Location = new Point(3, 145);
             label8.Name = "label8";
             label8.Size = new Size(127, 30);
             label8.TabIndex = 3;
@@ -573,7 +612,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 15.75F);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(31, 70);
+            label10.Location = new Point(3, 70);
             label10.Name = "label10";
             label10.Size = new Size(160, 30);
             label10.TabIndex = 2;
@@ -584,7 +623,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.FromArgb(67, 235, 103);
-            label11.Location = new Point(133, 12);
+            label11.Location = new Point(106, 0);
             label11.Name = "label11";
             label11.Size = new Size(266, 45);
             label11.TabIndex = 1;
@@ -1030,9 +1069,11 @@
             tbgPresente.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvResultadosCP).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvResultadosPresenteCP).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -1083,13 +1124,11 @@
         private PictureBox pictureBox2;
         private Label label1;
         private Panel panel4;
-        private DataGridView dtgvResultadosCP;
+        private DataGridView dtgvResultadosPresenteCP;
         private Label label6;
         private Panel panel5;
         private Button btnLimpiarCP;
         private Button btnCalcularCP;
-        private ComboBox cmbPeriodoCP;
-        private ComboBox cmbInteresCP;
         private TextBox txtPeriodoCP;
         private TextBox txtTasaInteresCP;
         private TextBox txtValorFuturoCP;
@@ -1138,5 +1177,10 @@
         private ComboBox cmbConvertibleA;
         private Label label26;
         private ComboBox cmbTipoInteresInicial;
+        private GroupBox groupBox2;
+        private ComboBox cmbConvertibleAFuturoIC;
+        private Label label27;
+        private ComboBox cmbTipoTasaFuturoIC;
+        private Label label28;
     }
 }
