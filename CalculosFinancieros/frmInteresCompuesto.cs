@@ -43,13 +43,31 @@ namespace CalculosFinancieros
             string capitalizacionInicial = cmbTipoTasaFuturoIC.SelectedItem.ToString();
             string capitalizacionFinal = cmbConvertibleAFuturoIC.SelectedItem.ToString();
 
-            CalculadoraPresenteIC calculadora = new CalculadoraPresenteIC(valorFuturo,Interes,periodo
-                ,capitalizacionInicial,capitalizacionFinal);
+            CalculadoraPresenteIC calculadora = new CalculadoraPresenteIC(valorFuturo, Interes, periodo
+                , capitalizacionInicial, capitalizacionFinal);
             calculadora.CalculoPresenteIC();
             var resultado = calculadora.ObtenerResultadoFormateado();
             ResultadosPresenteIC.Add(resultado);
             dtgvResultadosPresenteCP.DataSource = null;
             dtgvResultadosPresenteCP.DataSource = ResultadosPresenteIC.ToList();
+        }
+        List<object> ResultadosInteresIC = new List<object>();
+        private void CalcularInteresIC(object sender, EventArgs e)
+        {
+            double valorPresente = Convert.ToDouble(txtValorPresenteCI.Text);
+            double valorFuturo = Convert.ToDouble(txtValorFuturoCI.Text);
+            double periodo = Convert.ToDouble(txtPeriodoCI.Text);
+
+            string capitalizacionInicial = cmbTipoPeriodoDeIC.SelectedItem.ToString();
+            string capitalizacionConvertida = cmbTipoPeriodoAIC.SelectedItem.ToString();
+
+            CalculadoraInteresIC calculadora = new CalculadoraInteresIC(valorPresente,valorFuturo,periodo,capitalizacionInicial
+                ,capitalizacionConvertida);
+            calculadora.CalculoInteresIC();
+            var resultado = calculadora.ObtenerResultadoFormateado();
+            ResultadosInteresIC.Add(resultado);
+            dtgvResultadosCI.DataSource = null;
+            dtgvResultadosCI.DataSource = ResultadosInteresIC.ToList();
         }
     }
 }

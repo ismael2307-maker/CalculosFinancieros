@@ -81,6 +81,11 @@
             dtgvResultadosCI = new DataGridView();
             label19 = new Label();
             panel11 = new Panel();
+            groupBox3 = new GroupBox();
+            cmbTipoPeriodoAIC = new ComboBox();
+            label29 = new Label();
+            cmbTipoPeriodoDeIC = new ComboBox();
+            label30 = new Label();
             btnLimpiarCI = new Button();
             btnCalcularCI = new Button();
             txtPeriodoCI = new TextBox();
@@ -132,6 +137,7 @@
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCI).BeginInit();
             panel11.SuspendLayout();
+            groupBox3.SuspendLayout();
             panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             tbgPeriodo.SuspendLayout();
@@ -677,7 +683,7 @@
             panel10.BackColor = Color.FromArgb(51, 51, 51);
             panel10.Controls.Add(dtgvResultadosCI);
             panel10.Controls.Add(label19);
-            panel10.Location = new Point(538, 178);
+            panel10.Location = new Point(545, 178);
             panel10.Name = "panel10";
             panel10.Size = new Size(503, 357);
             panel10.TabIndex = 11;
@@ -705,6 +711,7 @@
             // panel11
             // 
             panel11.BackColor = Color.FromArgb(51, 51, 51);
+            panel11.Controls.Add(groupBox3);
             panel11.Controls.Add(btnLimpiarCI);
             panel11.Controls.Add(btnCalcularCI);
             panel11.Controls.Add(txtPeriodoCI);
@@ -716,8 +723,59 @@
             panel11.Controls.Add(label23);
             panel11.Location = new Point(16, 178);
             panel11.Name = "panel11";
-            panel11.Size = new Size(503, 357);
+            panel11.Size = new Size(523, 357);
             panel11.TabIndex = 10;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(cmbTipoPeriodoAIC);
+            groupBox3.Controls.Add(label29);
+            groupBox3.Controls.Add(cmbTipoPeriodoDeIC);
+            groupBox3.Controls.Add(label30);
+            groupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox3.ForeColor = Color.White;
+            groupBox3.Location = new Point(309, 63);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(204, 153);
+            groupBox3.TabIndex = 14;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Capitalizacion De Periodo";
+            // 
+            // cmbTipoPeriodoAIC
+            // 
+            cmbTipoPeriodoAIC.FormattingEnabled = true;
+            cmbTipoPeriodoAIC.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
+            cmbTipoPeriodoAIC.Location = new Point(8, 114);
+            cmbTipoPeriodoAIC.Name = "cmbTipoPeriodoAIC";
+            cmbTipoPeriodoAIC.Size = new Size(180, 29);
+            cmbTipoPeriodoAIC.TabIndex = 3;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(8, 90);
+            label29.Name = "label29";
+            label29.Size = new Size(105, 21);
+            label29.TabIndex = 2;
+            label29.Text = "Convertible a:";
+            // 
+            // cmbTipoPeriodoDeIC
+            // 
+            cmbTipoPeriodoDeIC.FormattingEnabled = true;
+            cmbTipoPeriodoDeIC.Items.AddRange(new object[] { "Anual", "Mensual", "Semestral", "Trimestral" });
+            cmbTipoPeriodoDeIC.Location = new Point(8, 49);
+            cmbTipoPeriodoDeIC.Name = "cmbTipoPeriodoDeIC";
+            cmbTipoPeriodoDeIC.Size = new Size(180, 29);
+            cmbTipoPeriodoDeIC.TabIndex = 1;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(8, 25);
+            label30.Name = "label30";
+            label30.Size = new Size(32, 21);
+            label30.TabIndex = 0;
+            label30.Text = "De:";
             // 
             // btnLimpiarCI
             // 
@@ -725,7 +783,7 @@
             btnLimpiarCI.FlatAppearance.BorderSize = 0;
             btnLimpiarCI.FlatStyle = FlatStyle.Flat;
             btnLimpiarCI.ForeColor = Color.White;
-            btnLimpiarCI.Location = new Point(283, 290);
+            btnLimpiarCI.Location = new Point(253, 290);
             btnLimpiarCI.Name = "btnLimpiarCI";
             btnLimpiarCI.Size = new Size(98, 32);
             btnLimpiarCI.TabIndex = 11;
@@ -738,38 +796,39 @@
             btnCalcularCI.FlatAppearance.BorderSize = 0;
             btnCalcularCI.FlatStyle = FlatStyle.Flat;
             btnCalcularCI.ForeColor = Color.White;
-            btnCalcularCI.Location = new Point(150, 290);
+            btnCalcularCI.Location = new Point(108, 290);
             btnCalcularCI.Name = "btnCalcularCI";
             btnCalcularCI.Size = new Size(98, 32);
             btnCalcularCI.TabIndex = 10;
             btnCalcularCI.Text = "Calcular";
             btnCalcularCI.UseVisualStyleBackColor = false;
+            btnCalcularCI.Click += CalcularInteresIC;
             // 
             // txtPeriodoCI
             // 
             txtPeriodoCI.BackColor = Color.FromArgb(26, 32, 40);
             txtPeriodoCI.BorderStyle = BorderStyle.None;
-            txtPeriodoCI.Location = new Point(217, 221);
+            txtPeriodoCI.Location = new Point(194, 213);
             txtPeriodoCI.Name = "txtPeriodoCI";
-            txtPeriodoCI.Size = new Size(123, 26);
+            txtPeriodoCI.Size = new Size(105, 26);
             txtPeriodoCI.TabIndex = 7;
             // 
             // txtValorPresenteCI
             // 
             txtValorPresenteCI.BackColor = Color.FromArgb(26, 32, 40);
             txtValorPresenteCI.BorderStyle = BorderStyle.None;
-            txtValorPresenteCI.Location = new Point(217, 145);
+            txtValorPresenteCI.Location = new Point(194, 138);
             txtValorPresenteCI.Name = "txtValorPresenteCI";
-            txtValorPresenteCI.Size = new Size(123, 26);
+            txtValorPresenteCI.Size = new Size(105, 26);
             txtValorPresenteCI.TabIndex = 6;
             // 
             // txtValorFuturoCI
             // 
             txtValorFuturoCI.BackColor = Color.FromArgb(26, 32, 40);
             txtValorFuturoCI.BorderStyle = BorderStyle.None;
-            txtValorFuturoCI.Location = new Point(217, 71);
+            txtValorFuturoCI.Location = new Point(194, 63);
             txtValorFuturoCI.Name = "txtValorFuturoCI";
-            txtValorFuturoCI.Size = new Size(123, 26);
+            txtValorFuturoCI.Size = new Size(105, 26);
             txtValorFuturoCI.TabIndex = 5;
             // 
             // label20
@@ -777,7 +836,7 @@
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 15.75F);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(31, 220);
+            label20.Location = new Point(8, 209);
             label20.Name = "label20";
             label20.Size = new Size(88, 30);
             label20.TabIndex = 4;
@@ -788,7 +847,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 15.75F);
             label21.ForeColor = Color.White;
-            label21.Location = new Point(31, 145);
+            label21.Location = new Point(8, 134);
             label21.Name = "label21";
             label21.Size = new Size(180, 30);
             label21.TabIndex = 3;
@@ -799,7 +858,7 @@
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 15.75F);
             label22.ForeColor = Color.White;
-            label22.Location = new Point(31, 70);
+            label22.Location = new Point(8, 59);
             label22.Name = "label22";
             label22.Size = new Size(160, 30);
             label22.TabIndex = 2;
@@ -810,7 +869,7 @@
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(67, 235, 103);
-            label23.Location = new Point(133, 12);
+            label23.Location = new Point(133, 0);
             label23.Name = "label23";
             label23.Size = new Size(266, 45);
             label23.TabIndex = 1;
@@ -1083,6 +1142,8 @@
             ((System.ComponentModel.ISupportInitialize)dtgvResultadosCI).EndInit();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -1182,5 +1243,10 @@
         private Label label27;
         private ComboBox cmbTipoTasaFuturoIC;
         private Label label28;
+        private GroupBox groupBox3;
+        private ComboBox cmbTipoPeriodoAIC;
+        private Label label29;
+        private ComboBox cmbTipoPeriodoDeIC;
+        private Label label30;
     }
 }
